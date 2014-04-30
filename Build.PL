@@ -14,6 +14,11 @@ my $builder = Module::Build->new(
     build_requires => {
         'Test::More' => 0,
     },
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/alexkalderimis/Dancer-Plugin-FormattedOutput',
+        },
+    },
     add_to_cleanup      => [ 'Dancer-Plugin-FormattedOutput-*' ],
     create_makefile_pl => 'traditional',
 );
