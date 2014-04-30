@@ -7,8 +7,17 @@ my $builder = Module::Build->new(
     license             => 'perl',
     dist_author         => q{Alex Kalderimis <alex kalderimis at gmail dot com>},
     dist_version_from   => 'lib/Dancer/Plugin/FormattedOutput.pm',
+    requires    => {
+        'Dancer' => 0,
+        'perl' => 5.010,
+    },
     build_requires => {
         'Test::More' => 0,
+    },
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/alexkalderimis/Dancer-Plugin-FormattedOutput',
+        },
     },
     add_to_cleanup      => [ 'Dancer-Plugin-FormattedOutput-*' ],
     create_makefile_pl => 'traditional',
